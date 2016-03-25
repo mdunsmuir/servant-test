@@ -1,0 +1,44 @@
+name:                servant-test
+version:             0.1.0.0
+synopsis:            Initial project template from stack
+description:         Please see README.md
+homepage:            http://github.com/mdunsmuir/servant-test
+license:             AllRightsReserved
+license-file:        LICENSE
+author:              Michael Dunsmuir
+maintainer:          mjdunsmuir@gmail.com
+copyright:           Copyright (c) 2016 Michael Dunsmuir
+category:            Web
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+executable servant-test
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , servant >=0.5
+                     , text
+                     , aeson >=0.10
+                     , servant-server
+                     , time
+                     , wai
+                     , warp
+                     , either
+                     , wai-extra
+                     , containers
+                     , stm
+                     , transformers
+                     , mtl
+  extensions:          DataKinds
+                     , TypeOperators
+                     , OverloadedStrings
+                     , GADTs
+                     , KindSignatures
+                     , DeriveGeneric
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/mdunsmuir/servant-test
